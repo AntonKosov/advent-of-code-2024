@@ -1,15 +1,14 @@
-package aoc
+package transform
 
 import (
 	"regexp"
 	"strconv"
+
+	"github.com/AntonKosov/advent-of-code-2024/aoc/must"
 )
 
 func StrToInt(str string) int {
-	r, err := strconv.Atoi(str)
-	Must(err)
-
-	return r
+	return must.Return(strconv.Atoi(str))
 }
 
 func StrToInts(str string) []int {

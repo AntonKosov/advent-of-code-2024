@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/AntonKosov/advent-of-code-2024/aoc"
+	"github.com/AntonKosov/advent-of-code-2024/aoc/input"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 }
 
 func read() []string {
-	lines := aoc.ReadAllInput()
+	lines := input.Lines()
 	lines = lines[:len(lines)-1]
 
 	return lines

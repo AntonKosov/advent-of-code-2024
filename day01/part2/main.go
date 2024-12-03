@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/AntonKosov/advent-of-code-2024/aoc"
+	"github.com/AntonKosov/advent-of-code-2024/aoc/input"
+	"github.com/AntonKosov/advent-of-code-2024/aoc/transform"
 )
 
 func main() {
@@ -12,11 +13,11 @@ func main() {
 }
 
 func read() [2][]int {
-	lines := aoc.ReadAllInput()
+	lines := input.Lines()
 	lines = lines[:len(lines)-1]
 	input := [2][]int{make([]int, len(lines)), make([]int, len(lines))}
 	for i, line := range lines {
-		parts := aoc.StrToInts(line)
+		parts := transform.StrToInts(line)
 		input[0][i] = parts[0]
 		input[1][i] = parts[1]
 	}

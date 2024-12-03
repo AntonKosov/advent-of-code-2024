@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/AntonKosov/advent-of-code-2024/aoc"
+	"github.com/AntonKosov/advent-of-code-2024/aoc/input"
 	"github.com/AntonKosov/advent-of-code-2024/aoc/slice"
+	"github.com/AntonKosov/advent-of-code-2024/aoc/transform"
 )
 
 func main() {
@@ -13,10 +14,10 @@ func main() {
 }
 
 func read() [][]int {
-	lines := aoc.ReadAllInput()
+	lines := input.Lines()
 	lines = lines[:len(lines)-1]
 
-	return slice.Map(lines, func(line string) []int { return aoc.StrToInts(line) })
+	return slice.Map(lines, func(line string) []int { return transform.StrToInts(line) })
 }
 
 func process(reports [][]int) int {

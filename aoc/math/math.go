@@ -1,4 +1,4 @@
-package aoc
+package math
 
 type Numbers interface {
 	int
