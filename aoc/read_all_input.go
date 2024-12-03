@@ -5,18 +5,17 @@ import (
 	"strings"
 )
 
-func ReadAllInput() []string {
+func ReadRawInput() []byte {
 	if len(os.Args) != 2 {
 		panic("wrong arguments")
 	}
-	return ReadAllInputFromFile(os.Args[1])
-}
 
-func ReadAllInputFromFile(name string) []string {
-	bytes, err := os.ReadFile(name)
+	bytes, err := os.ReadFile(os.Args[1])
 	Must(err)
 
-	lines := strings.Split(string(bytes), "\n")
+	return bytes
+}
 
-	return lines
+func ReadAllInput() []string {
+	return strings.Split(string(ReadRawInput()), "\n")
 }
