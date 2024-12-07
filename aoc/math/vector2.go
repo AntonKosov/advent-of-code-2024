@@ -16,3 +16,13 @@ func (v Vector2[T]) Add(av Vector2[T]) Vector2[T] {
 func (v Vector2[T]) Sub(av Vector2[T]) Vector2[T] {
 	return NewVector2(v.X-av.X, v.Y-av.Y)
 }
+
+// RotateLeft rotates the vector to the left (left-handed system)
+func (v Vector2[T]) RotateLeft() Vector2[T] {
+	return NewVector2(v.Y, -v.X)
+}
+
+// RotateRight rotates the vector to the right (left-handed system)
+func (v Vector2[T]) RotateRight() Vector2[T] {
+	return NewVector2(-v.Y, v.X)
+}
