@@ -11,3 +11,7 @@ func Abs[T Numbers](v T) T {
 
 	return v
 }
+
+func Mod(a, b int) int {
+	return (a%b + b) % b
+}

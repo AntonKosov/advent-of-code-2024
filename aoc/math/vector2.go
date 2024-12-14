@@ -17,6 +17,10 @@ func (v Vector2[T]) Sub(av Vector2[T]) Vector2[T] {
 	return NewVector2(v.X-av.X, v.Y-av.Y)
 }
 
+func (v Vector2[T]) Mul(scalar T) Vector2[T] {
+	return NewVector2(v.X*scalar, v.Y*scalar)
+}
+
 // RotateLeft rotates the vector to the left (left-handed system)
 func (v Vector2[T]) RotateLeft() Vector2[T] {
 	return NewVector2(v.Y, -v.X)
