@@ -15,3 +15,15 @@ func Abs[T Numbers](v T) T {
 func Mod(a, b int) int {
 	return (a%b + b) % b
 }
+
+func Sign[T Numbers](v T) int {
+	if v == 0 {
+		return 0
+	}
+
+	if v < 0 {
+		return -1
+	}
+
+	return 1
+}
